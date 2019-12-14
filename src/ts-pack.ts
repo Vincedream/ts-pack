@@ -1,7 +1,6 @@
-const aa = 1;
+// Import here Polyfills if needed. Recommended core-js (npm i -D core-js)
+  // import "core-js/fn/array.find"
+  // ...
+export default class DummyClass {
 
-const aaf = function() {
-  return 1112;
 }
-
-export default aaf;
