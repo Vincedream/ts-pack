@@ -1,14 +1,13 @@
-import DummyClass from "../src/ts-pack"
+import { CITY_MAP, searchNode }  from '../src/ts-pack'
 
-/**
- * Dummy test
- */
-describe("Dummy test", () => {
-  it("works if true is truthy", () => {
-    expect(true).toBeTruthy()
-  })
+test('checkout CITY_MAP', () => {
+    expect(CITY_MAP[0]).toEqual({children: [{label: '北京市', value: 36}], label: '北京', value: 1});
+});
 
-  it("DummyClass is instantiable", () => {
-    expect(new DummyClass()).toBeInstanceOf(DummyClass)
-  })
-})
+test('search AreaNode', () => {
+    expect(searchNode(CITY_MAP, 434)).toEqual({
+        children: undefined,
+        current: {label: '日喀则地区', value: 434},
+        parent: {label: '西藏自治区', value: 26}
+    });
+});

@@ -15,7 +15,7 @@ if (typeof pkg.repository === "object") {
 
 let parsedUrl = url.parse(repoUrl)
 let repository = (parsedUrl.host || "") + (parsedUrl.path || "")
-let ghToken = process.env.GH_TOKEN
+let ghToken = 'bae5c6066ecdc1ab4c8e0e9f1c34a5d4a024af14'
 
 echo("Deploying docs!!!")
 cd("docs")
